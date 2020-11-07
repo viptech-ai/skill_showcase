@@ -18,8 +18,8 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 #     # Don't forget to use absolute paths, not relative paths.
 #     os.path.join(PROJECT_ROOT, 'templates').replace('\\','/'),
 # )
-
 from pathlib import Path
+import mimetypes
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -132,3 +132,5 @@ STATICFILES_DIRS = [
     # 'other_static_path',
 ]
 STATIC_ROOT = "collect_all_static"
+
+mimetypes.add_type("text/css", ".css", True)
